@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular sample</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="sample.js"></script>
+    <link rel="stylesheet" type="text/css" href="page.css">
+</head>
+<body>
+<div ng-app="clickapp">
+    <div class="square" ng-click="addClick($event)"></div>
+    <ul>
+        <li ng-repeat="click in clicks track by $index">[{{click.date}}] x:{{click.x}}, y:{{click.y}}</li>
+    </ul>
+</div>
+</body>
+</html>
